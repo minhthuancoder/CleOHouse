@@ -61,6 +61,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    width: 100%;
     .homePageOneLeft{
         width: 50%;
     }
@@ -152,8 +153,9 @@
         align-items:initial;
         border-radius: 0 0 50px 50px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        
         .homePageOneLeft{
-            width: 100%;
+            width: auto;
         }
         .homePageOneLeft,
         .homePageOneRight {

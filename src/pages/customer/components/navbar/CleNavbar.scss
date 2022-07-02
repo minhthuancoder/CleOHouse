@@ -1,4 +1,10 @@
-
+.navbar span:hover{
+    color: #f76f0b!important
+  }
+  .sticky.navbar {
+      position: sticky;
+      top: 0;
+  }
 @mixin  responScreen($breakpoint){
     @if $breakpoint == 320{
         @media (max-width: 320px) { @content };

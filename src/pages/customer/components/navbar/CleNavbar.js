@@ -5,11 +5,12 @@
  * All rights reserved ©CleOHouse Inc. 2022
  */
 import React from 'react';
-import useClassName from '../../../hooks/UseClassName'
+import useClassName from '../../../../hooks/UseClassName'
+import "./CleNavbar.scss"
 function CleNavbar(props) {
 
     const { addClassName } = useClassName()
-    const className_NavLink = ["nav-link", "text-white", "fw-bold", "fs-5", "NHover"]
+    const className_NavLink = ["nav-link", "text-white", "fw-bold"]
     const className_DropdownMenu = ["dropdown-item", "fw-bold", "text-secondary"]
     const ariaCurrent = {"aria-current":"page"};
 

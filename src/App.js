@@ -1,4 +1,4 @@
-import CleNavbar from "./pages/customer/components/CleNavbar";
+import CleNavbar from "./pages/customer/components/navbar/CleNavbar";
 import HomePage from "./pages/customer/home-page/HomePage";
 import './App.css'
 function App() {

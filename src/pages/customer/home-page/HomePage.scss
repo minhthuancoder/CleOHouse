@@ -1,11 +1,175 @@
-/* Define standard variables and values for website */
-$bgcolor: lightblue;
-$textcolor: darkblue;
-$fontsize: 18px;
 
-/* Use the variables */
-body {
-  background-color: $bgcolor;
-  color: $textcolor;
-  font-size: $fontsize;
+
+@mixin  responScreen($breakpoint){
+    @if $breakpoint == 320{
+        @media (max-width: 320px) { @content };
+    }
+    @if $breakpoint == 480{
+        @media (max-width: 480px) { @content };
+    }
+    @if $breakpoint == 600{
+        @media (max-width: 600px) { @content };
+    }
+    @if $breakpoint == 768{
+        @media (max-width: 768px) { @content };
+    }
+    @if $breakpoint == 900{
+        @media (max-width: 900px) { @content };
+    }
+    @if $breakpoint == 1200{
+        @media (max-width: 1200px) { @content };
+    }
+    @if $breakpoint == 1800{
+        @media (max-width: 1800px) { @content };
+    }
+    @if $breakpoint == 1801{
+        @media (min-width: 1801px) { @content };
+    }
 }
+@mixin displayTextSetUp(){
+    @content;
+}
+@mixin displayText1(){
+    font-size: 5rem;
+    @content;
+}
+@mixin displayText2(){
+    font-size: 4.5rem;
+    @content;
+}
+@mixin displayText3(){
+    font-size: 4rem;
+    @content;
+}
+@mixin displayText4(){
+    font-size: 3.5rem;
+    @content;
+}
+@mixin displayText5(){
+    font-size: 3rem;
+    @content;
+}
+@mixin displayText6(){
+    font-size: 2.5rem;
+    @content;
+}
+
+.homePageOne {
+    height: 100vh;
+    background-image: url("../../../assets/banner/banner2.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .homePageOneLeft{
+        width: 50%;
+    }
+    & .homePageOne__title {
+        color: rgb(4, 180, 134);
+        font-weight: bold;
+    }
+
+    & .homePageOne__desc {
+        color: #2260d6;
+        font-weight: bold;
+    }
+    @include responScreen(1800){
+
+        .homePageOneLeft, .homePageOneRight {
+            margin: -150px 0 0 0;
+        }
+        .homePageOne__Img {
+            width: 500px
+        }
+        .homePageOne__title { 
+            @include displayText1() 
+        }
+    
+        .homePageOne__desc {
+           
+            @include displayText2()
+        }
+    }
+    @include responScreen(1200){
+        .homePageOneLeft,
+        .homePageOneRight {
+            margin: -150px 0 0 0;
+        }
+        .homePageOne__Img {
+            width: 350px
+        }   
+        .homePageOne__title {
+            @include displayText3() 
+        }
+        .homePageOne__desc {
+            @include displayText4() 
+        }
+    }
+    @include responScreen(900){
+
+        .homePageOneLeft,
+        .homePageOneRight {
+            margin: -150px 0 0 0;
+        }
+        .homePageOne__Img {
+            width: 250px
+        }   
+        .homePageOne__title {
+            @include displayText5() 
+        }
+        .homePageOne__desc {
+            @include displayText6() 
+        }
+    }
+    @include responScreen(768){
+        .homePageOneLeft{
+            width: 40%;
+        }
+        .homePageOneLeft,
+        .homePageOneRight {
+            margin: -150px 0 0 0;
+        }
+        .homePageOne__Img {
+            width: 230px
+        }   
+        .homePageOne__title {
+            @include displayTextSetUp(){
+                font-size: 2rem;
+            }
+        }
+        .homePageOne__desc {
+            @include displayTextSetUp(){
+                font-size: 2rem;
+            }
+        }
+    }
+    @include responScreen(600){
+        height: 50vh;
+        display: flex;
+        flex-direction: column-reverse;
+        background-image: url("../../../assets/banner/banner3.jpg");
+        background-size:cover;
+        align-items:initial;
+        border-radius: 0 0 50px 50px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        .homePageOneLeft{
+            width: 100%;
+        }
+        .homePageOneLeft,
+        .homePageOneRight {
+            margin: 0 0 0 2rem;
+        }
+    
+        .homePageOne__Img {
+            width: 100px
+        }
+        .homePageOne__desc {
+            @include displayText6()
+        }
+        .homePageOne__title{
+            @include displayText6()
+        }
+    }
+}
+
+

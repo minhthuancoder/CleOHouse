@@ -1,0 +1,35 @@
+.navbar span:hover{
+  color: #0dcaf0!important
+}
+
+.homePageOne{
+    height: 100vh;
+    background-image: url("./assets/banner/banner2.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.homePageOneLeft, .homePageOneRight{
+    margin: -150px 0 0 0;
+}
+
+.homePageOne__Img {
+    width: 500px
+}
+
+.homePageOne__title{
+    color: rgb(4, 180, 134);
+    font-weight: bold;
+}
+.homePageOne__desc{
+    color: #2260d6;
+    font-weight: bold;
+}
+.sticky.navbar {
+    position: sticky;
+    top: 0;
+}
+
+
+

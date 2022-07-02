@@ -1,50 +1,90 @@
-.navbar span:hover{
-    color: #f76f0b!important
-  }
-  .sticky.navbar {
-      position: sticky;
-      top: 0;
-  }
-@mixin  responScreen($breakpoint){
-    @if $breakpoint == 320{
-        @media (max-width: 320px) { @content };
+@mixin responScreen($breakpoint) {
+    @if $breakpoint ==320 {
+        @media (max-width: 320px) {
+            @content
+        }
+
+        ;
     }
-    @if $breakpoint == 480{
-        @media (max-width: 480px) { @content };
+
+    @if $breakpoint ==480 {
+        @media (max-width: 480px) {
+            @content
+        }
+
+        ;
     }
-    @if $breakpoint == 600{
-        @media (max-width: 600px) { @content };
+
+    @if $breakpoint ==600 {
+        @media (max-width: 600px) {
+            @content
+        }
+
+        ;
     }
-    @if $breakpoint == 768{
-        @media (max-width: 768px) { @content };
+
+    @if $breakpoint ==768 {
+        @media (max-width: 768px) {
+            @content
+        }
+
+        ;
     }
-    @if $breakpoint == 900{
-        @media (max-width: 900px) { @content };
+
+    @if $breakpoint ==900 {
+        @media (max-width: 900px) {
+            @content
+        }
+
+        ;
     }
-    @if $breakpoint == 1200{
-        @media (max-width: 1200px) { @content };
+
+    @if $breakpoint ==1200 {
+        @media (max-width: 1200px) {
+            @content
+        }
+
+        ;
     }
-    @if $breakpoint == 1800{
-        @media (max-width: 1800px) { @content };
+
+    @if $breakpoint ==1800 {
+        @media (max-width: 1800px) {
+            @content
+        }
+
+        ;
     }
-    @if $breakpoint == 1801{
-        @media (min-width: 1801px) { @content };
+
+    @if $breakpoint ==1801 {
+        @media (min-width: 1801px) {
+            @content
+        }
+
+        ;
     }
 }
-@mixin navlinkText(){
+
+@mixin navlinkText() {
     @content;
 }
 
-.navbar{
-    .nav-link{
+.navbar {
+    .nav-link {
         font-size: 1.2rem
     }
-    @include responScreen(1200){
-        .nav-link{
+
+    @include responScreen(1200) {
+        .nav-link {
             font-size: 1rem
         }
-        
+    }
+
+    & span:hover {
+        color: #f76f0b !important
+    }
+
+    &.sticky {
+        position: sticky;
+        top: 0;
     }
 }
-
-

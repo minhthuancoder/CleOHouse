@@ -1,6 +1,6 @@
 
 
-@mixin  responScreen($breakpoint){
+@mixin responScreen($breakpoint){
     @if $breakpoint == 320{
         @media (max-width: 320px) { @content };
     }
@@ -71,11 +71,11 @@
         & span {
             font-weight: 500;
             margin-top: 5px;
+            text-align: center;
         }
     }
     
     img{
-        // width: 80%;
         max-width: 80%;
     }
     .homePageItemService.homePageItemService-active{
@@ -86,7 +86,15 @@
         & span {
             font-weight: bold;
             margin-top: 5px;
-            color: rgb(4, 180, 134);;
+            color: rgb(4, 180, 134);
+            text-align: center;
+        }
+    }
+    @include responScreen(600){
+        
+        .homePageItemService{
+            width: 25%;
+            height: 25%;
         }
     }
 }
@@ -111,6 +119,32 @@
             }
         }
     }
+    @include responScreen(600){
+        
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .hpgServiceDetailLeft{
+            width: 100%;
+            text-align: center;
+            img{
+                max-width: 80%;
+            }
+        }
+        .hpgServiceDetailRight{
+            width: 100%;
+            text-align: justify;
+            .hpgServiceDetailRight-imagedetail{
+                display: flex;
+                justify-content: space-around;
+                img{
+                    width: 30%
+                }
+            }
+        }
+    }
+    
 }
 
 

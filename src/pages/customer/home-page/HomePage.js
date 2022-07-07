@@ -72,7 +72,7 @@ const HomePage = props => {
                             <img src="https://hienvanspa.com/wp-content/uploads/2021/06/tri-mun.jpg"/>
                         </div>
                         <div class="hpgServiceDetailRight">
-                            <p className="fs-3 fw-bold text-muted">ĐIỀU TRỊ MỤN</p>
+                            <p className="fs-3 fw-bold text-muted mt-1">ĐIỀU TRỊ MỤN</p>
                             <div class="content-service">
                                 <span>Hơn 50.000 khách hàng trong và ngoài nước, đã điều trị da mụn thành công tại Hiền Vân Spa. Không phân biệt mụn nhẹ hay nặng, chỉ sau 90 phút đầu tiên, cam kết giảm mụn viêm hơn 80%. Bảo hành kết quả điều trị mụn trọn đời không tái phát bằng văn bản.</span>
                             </div>
@@ -82,7 +82,7 @@ const HomePage = props => {
                                 <img src="https://hienvanspa.com/wp-content/uploads/2021/06/tri-mun-3.jpg"/>
                             </div>
                             <div className="d-flex justify-content-center">
-                                <button type="button" className="btn btn-primary my-3 fw-bold w-25 p-2">Xem chi tiết</button>
+                                <button type="button" className="btn btn-primary my-3 fw-bold p-2">Xem chi tiết</button>
                             </div>
                         </div>
                     </div>

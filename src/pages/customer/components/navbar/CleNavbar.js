@@ -15,7 +15,7 @@ function CleNavbar(props) {
     const ariaCurrent = {"aria-current":"page"};
 
     return (
-        <nav className="sticky navbar navbar-expand-lg navbar-light " style={{backgroundColor: "#04B486"}}>
+        <nav className=" navbar sticky navbar-expand-lg navbar-light " style={{backgroundColor: "#04B486"}}>
             <div className="container">
                 <span className="navbar-brand text-white fw-bold fs-4">CLEO'HOUSE</span>
                 <button className="navbar-toggler bg-white " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

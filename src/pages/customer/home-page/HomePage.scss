@@ -56,122 +56,62 @@
 
 .homePageOne {
     height: 100vh;
-    background-image: url("../../../assets/banner/banner2.jpg");
-    background-size: cover;
+}
+.homePageServiceList{
+    line-height: 1.6;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    .homePageOneLeft{
-        width: 50%;
-    }
-    & .homePageOne__title {
-        color: rgb(4, 180, 134);
-        font-weight: bold;
-    }
+    justify-content: center;
+    flex-wrap: wrap;
 
-    & .homePageOne__desc {
-        color: #2260d6;
-        font-weight: bold;
+    .homePageItemService{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & span {
+            font-weight: 500;
+            margin-top: 5px;
+        }
     }
-    @include responScreen(1800){
-
-        .homePageOneLeft, .homePageOneRight {
-            margin: -150px 0 0 0;
-        }
-        .homePageOne__Img {
-            width: 500px
-        }
-        .homePageOne__title { 
-            @include displayText1() 
-        }
     
-        .homePageOne__desc {
-           
-            @include displayText2()
-        }
+    img{
+        // width: 80%;
+        max-width: 80%;
     }
-    @include responScreen(1200){
-        .homePageOneLeft,
-        .homePageOneRight {
-            margin: -150px 0 0 0;
-        }
-        .homePageOne__Img {
-            width: 350px
-        }   
-        .homePageOne__title {
-            @include displayText3() 
-        }
-        .homePageOne__desc {
-            @include displayText4() 
-        }
-    }
-    @include responScreen(900){
-
-        .homePageOneLeft,
-        .homePageOneRight {
-            margin: -150px 0 0 0;
-        }
-        .homePageOne__Img {
-            width: 250px
-        }   
-        .homePageOne__title {
-            @include displayText5() 
-        }
-        .homePageOne__desc {
-            @include displayText6() 
-        }
-    }
-    @include responScreen(768){
-        .homePageOneLeft{
-            width: 40%;
-        }
-        .homePageOneLeft,
-        .homePageOneRight {
-            margin: -150px 0 0 0;
-        }
-        .homePageOne__Img {
-            width: 230px
-        }   
-        .homePageOne__title {
-            @include displayTextSetUp(){
-                font-size: 2rem;
-            }
-        }
-        .homePageOne__desc {
-            @include displayTextSetUp(){
-                font-size: 2rem;
-            }
-        }
-    }
-    @include responScreen(600){
-        height: 50vh;
-        display: flex;
-        flex-direction: column-reverse;
-        background-image: url("../../../assets/banner/banner3.jpg");
-        background-size:cover;
-        align-items:initial;
-        border-radius: 0 0 50px 50px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        
-        .homePageOneLeft{
-            width: auto;
-        }
-        .homePageOneLeft,
-        .homePageOneRight {
-            margin: 0 0 0 2rem;
-        }
-    
-        .homePageOne__Img {
-            width: 100px
-        }
-        .homePageOne__desc {
-            @include displayText6()
-        }
-        .homePageOne__title{
-            @include displayText6()
+    .homePageItemService.homePageItemService-active{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & span {
+            font-weight: bold;
+            margin-top: 5px;
+            color: rgb(4, 180, 134);;
         }
     }
 }
+.homePageServiceDetailDesc{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    .hpgServiceDetailLeft{
+        width: 35%;
+        img{
+            max-width: 100%;
+        }
+    }
+    .hpgServiceDetailRight{
+        width: 65%;
+
+        .hpgServiceDetailRight-imagedetail{
+            display: flex;
+            justify-content: space-around;
+            img{
+                width: 25%
+            }
+        }
+    }
+}
+
 
 

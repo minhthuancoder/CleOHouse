@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo from '../../../assets/Logo/logo.png'
 import "./HomePage.scss"
 const HomePage = props => {
     return (

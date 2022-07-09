@@ -15,7 +15,7 @@ function CleNavbar(props) {
     const ariaCurrent = {"aria-current":"page"};
 
     return (
-        <nav className=" navbar sticky navbar-expand-lg navbar-light " style={{backgroundColor: "#04B486"}}>
+        <nav className="navbar sticky navbar-expand-lg navbar-light navbar-color">
             <div className="container">
                 <span className="navbar-brand text-white fw-bold fs-4">CLEO'HOUSE</span>
                 <button className="navbar-toggler bg-white " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,10 +23,10 @@ function CleNavbar(props) {
                 </button>
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                        <span className={addClassName(...className_NavLink)} {...ariaCurrent}>Trang chủ</span>
                         <span className={addClassName(...className_NavLink)} {...ariaCurrent}>Giới thiệu</span>
                         <span className={addClassName(...className_NavLink)} {...ariaCurrent}>Gói dịch vụ</span>
                         <span className={addClassName(...className_NavLink)} {...ariaCurrent}>Bảng giá dịch vụ</span>
+                        <span className={addClassName(...className_NavLink)} {...ariaCurrent}>Sản phẩm</span>
                         <span className={addClassName(...className_NavLink)} {...ariaCurrent}>Hiệu quả</span>
                         <span className="nav-item dropdown">
                             <span className={addClassName(...className_NavLink, "dropdown-toggle")} id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -38,6 +38,7 @@ function CleNavbar(props) {
                                 <li><span className={addClassName(...className_DropdownMenu)}>Trị sẹo</span></li>
                             </ul>
                         </span>
+                        <span className={addClassName(...className_NavLink)} {...ariaCurrent}>Đào tạo</span>
                         <span className={addClassName(...className_NavLink)} {...ariaCurrent}>Liên hệ</span>
                         
                     </div>

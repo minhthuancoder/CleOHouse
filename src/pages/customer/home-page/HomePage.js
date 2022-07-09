@@ -82,7 +82,7 @@ const HomePage = props => {
                                 <img src="https://hienvanspa.com/wp-content/uploads/2021/06/tri-mun-3.jpg"/>
                             </div>
                             <div className="d-flex justify-content-center">
-                                <button type="button" className="btn btn-primary my-3 fw-bold p-2">Xem chi tiết</button>
+                                <button type="button" className="btn my-3 text-white fw-bold p-2 btn-color">Xem chi tiết</button>
                             </div>
                         </div>
                     </div>

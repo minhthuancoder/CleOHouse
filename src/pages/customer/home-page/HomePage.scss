@@ -15,21 +15,22 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-       
+
         @keyframes hoverService {
             from {
-              top: 0
+                top: 0
             }
-          
+
             to {
-              top: -10px
+                top: -10px
             }
-          }
+        }
+
         &:hover {
             position: relative;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             border-radius: 25px;
-            padding: 2px 1px;
+            
             top: -10px;
             animation: ease 1s hoverService;
         }
@@ -52,7 +53,7 @@
         align-items: center;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         border-radius: 25px;
-        padding: 5px 0;
+        padding: 3px 0;
 
         span {
             font-weight: bold;
@@ -62,12 +63,32 @@
         }
     }
 
+    @include responScreen(900) {
+
+        .homePageItemService {
+            margin: 10px 0;
+        }
+
+    }
+
     @include responScreen(600) {
 
         .homePageItemService {
             width: 25%;
-            height: 25%;
+            height: 30%;
+            margin: 10px 0;
+
+            &:hover {
+                border-radius: 10px;
+            }
         }
+
+        .homePageItemService.homePageItemService-active {
+
+            border-radius: 10px;
+
+        }
+
     }
 }
 

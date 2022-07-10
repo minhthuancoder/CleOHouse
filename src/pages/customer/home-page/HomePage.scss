@@ -2,112 +2,148 @@
 @import '../../../assets/css/displayText.scss';
 @import '../../../assets/css/color.scss';
 
-.homePageBanner{
+.homePageBanner {}
 
-}
-
-.homePageServiceList{
+.homePageServiceList {
     line-height: 1.6;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 
     .homePageItemService {
-        display:flex;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+       
+        @keyframes hoverService {
+            from {
+              top: 0
+            }
+          
+            to {
+              top: -10px
+            }
+          }
+        &:hover {
+            position: relative;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 25px;
+            padding: 2px 1px;
+            top: -10px;
+            animation: ease 1s hoverService;
+        }
 
-        & span {
+        span {
             font-weight: 500;
             margin-top: 5px;
             text-align: center;
         }
     }
-    
-    img{
+
+    img {
         max-width: 80%;
     }
-    .homePageItemService.homePageItemService-active{
-        display:flex;
+
+    .homePageItemService.homePageItemService-active {
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        & span {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 25px;
+        padding: 5px 0;
+
+        span {
             font-weight: bold;
             margin-top: 5px;
             color: $color-main;
             text-align: center;
         }
     }
-    @include responScreen(600){
-        
-        .homePageItemService{
+
+    @include responScreen(600) {
+
+        .homePageItemService {
             width: 25%;
             height: 25%;
         }
     }
 }
-.homePageServiceDetailDesc{
-    display:flex;
+
+.homePageServiceDetailDesc {
+    display: flex;
     justify-content: center;
     align-items: center;
-    .hpgServiceDetailLeft{
+
+    .hpgServiceDetailLeft {
         width: 35%;
-        img{
+
+        img {
             max-width: 100%;
         }
     }
-    .hpgServiceDetailRight{
+
+    .hpgServiceDetailRight {
         width: 65%;
 
-        .hpgServiceDetailRight-imagedetail{
+        .hpgServiceDetailRight-imagedetail {
             display: flex;
             justify-content: space-around;
-            img{
+
+            img {
                 width: 25%
             }
         }
-        .btn-color{
+
+        .btn-color {
             background-color: $color-main;
             transition: all 0.9s ease;
 
         }
-        .btn-color:hover{
+
+        .btn-color:hover {
             box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
             opacity: 0.9;
         }
     }
-    @include responScreen(600){
-        
-        display:flex;
+
+    @include responScreen(600) {
+
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .hpgServiceDetailLeft{
+
+        .hpgServiceDetailLeft {
             width: 100%;
             text-align: center;
-            img{
+
+            img {
                 max-width: 80%;
             }
         }
-        .hpgServiceDetailRight{
+
+        .hpgServiceDetailRight {
             width: 100%;
             text-align: justify;
 
-            .hpgServiceDetailRight-imagedetail{
+            .hpgServiceDetailRight-imagedetail {
                 display: flex;
                 justify-content: space-around;
-                img{
+
+                img {
                     width: 30%;
                 }
             }
         }
-        
-        
     }
-    
 }
 
+.homePageIntroduceImg {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 
-
+    .homePageIntroduceImg_responsive {
+        width: 100%;
+    }
+}

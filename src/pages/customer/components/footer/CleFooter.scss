@@ -1,0 +1,22 @@
+@import '../../../../assets/css/color.scss';
+#footer{
+    background-color: $color-main;
+    *{
+        color: white;
+    }
+    .footer__branchList{
+        
+        & li{
+            list-style-type: none;
+        }
+        
+    }
+    .bi-facebook:hover{
+        color: #0026ff;
+        cursor: pointer;
+    }
+    .bi-youtube:hover{
+        color: #ff0000;
+        cursor: pointer;
+    }
+}
